@@ -1,24 +1,24 @@
 -- 1. Query all of the entries in the Genre table
 
-SELECT * FROM Genre;
+    SELECT * FROM Genre;
 
 -- 2. Query all the entries in the Artist table and order by the artist's name. HINT: use the ORDER BY keywords
 
-SELECT  Id, 
-        ArtistName, 
-        YearEstablished  
-FROM Artist 
-ORDER BY (ArtistName) ASC
+    SELECT  Id, 
+            ArtistName, 
+            YearEstablished  
+    FROM Artist 
+    ORDER BY (ArtistName) ASC
 
 -- 3. Write a SELECT query that lists all the songs in the Song table and include the Artist name
 
-SELECT
-    song.Id,
-    song.Title,
-    song.ArtistId,
-    artist.ArtistName
-FROM Song song
-JOIN Artist artist ON song.ArtistId = artist.Id;
+    SELECT
+        song.Id,
+        song.Title,
+        song.ArtistId,
+        artist.ArtistName
+    FROM Song song
+    JOIN Artist artist ON song.ArtistId = artist.Id;
 
 -- 4. Write a SELECT query that lists all the Artists that have a Pop Album
 
